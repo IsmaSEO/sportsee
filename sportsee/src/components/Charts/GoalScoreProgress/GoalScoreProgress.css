@@ -1,0 +1,34 @@
+.goal-score-progress {
+  display: block;
+  margin: auto;
+}
+
+.circle-background {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 10;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #ff0000; /* Couleur rouge pour la progression */
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.4s ease-in-out;
+}
+
+.circle-center {
+  fill: #ffffff; /* Fond blanc pour masquer la progression */
+}
+
+.progress-percentage {
+  font-size: 1.5rem;
+  font-weight: 500;
+  fill: #20253a;
+}
+
+.progress-goal {
+  font-size: 1rem;
+  fill: #74798c;
+  font-weight: 500;
+}
