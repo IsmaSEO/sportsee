@@ -1,0 +1,78 @@
+/* Conteneur principal */
+.activity-chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* Header */
+.activity-chart-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 50px;
+}
+
+/* Titre */
+.activity-chart-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #20253a;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Tooltip personnalisé */
+.custom-tooltip {
+  background-color: #e60000;
+  color: #fff;
+  padding: 10px;
+  margin: 15px;
+  line-height: 1;
+  width: 50%;
+}
+
+/* Alignement des textes de l'axe X */
+.recharts-x-axis .recharts-cartesian-axis-tick text {
+  fill: #9b9b9b;
+  font-size: 0.9rem;
+  text-anchor: middle;
+}
+
+/* Grille horizontale */
+.recharts-cartesian-grid-horizontal line {
+  stroke: #dedede;
+}
+
+/* Légende */
+.activity-legend {
+  display: flex;
+  gap: 20px; /* Espacement entre les éléments de la légende */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #74798c;
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-dot.black {
+  background-color: #282d30;
+}
+
+.legend-dot.red {
+  background-color: #e60000;
+}
