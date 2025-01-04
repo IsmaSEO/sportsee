@@ -1,0 +1,31 @@
+.average-session-chart-container {
+  background: linear-gradient(to right, #ff0000 0%, #ff0000 70%, #e60000 70%);
+  border-radius: 5px;
+  padding: 20px 10px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+  width: 24%;
+  height: 25vh;
+}
+
+.average-session-chart-title {
+  color: #fff;
+  width: 100%;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.504;
+  line-height: 1.25;
+}
+
+.recharts-tooltip {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
