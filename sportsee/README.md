@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Projet React : SportSee - Tableau de bord d'analyse avec React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+P12 de la formation Développeur d'application Javascript React | OpenClassrooms.
 
-In the project directory, you can run:
+### Objectif du projet
 
-### `npm start`
+Le but est de créer la page de profil d'un utilisateur en utilisant des maquettes fournies : [Maquettes Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Les tâches sont organisées en Kanban selon des User Stories : [Kanban Notion](https://www.notion.so/openclassrooms/Copy-of-Dev4U-projet-Learn-Home-6686aa4b5f44417881a4884c9af5669e).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Le backend est disponible ici : [Backend GitHub](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Outils et Contraintes Techniques
 
-### `npm run build`
+### Outils standards
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Create React App**
+- **React Router**
+- **Styling** : CSS
+- **Recharts.js** : Librairie de graphiques
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contraintes techniques
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### React
 
-### `npm run eject`
+- Découpage en composants modulaires et réutilisables (un composant par fichier).
+- Structure logique des fichiers et utilisation des props et du state au besoin.
+- Gestion des événements.
+- Externalisation des appels API en dehors des composants.
+- Standardisation des données provenant de l'API.
+- Utilisation recommandée (non obligatoire) des composants fonctionnels.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### React Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Gestion des paramètres de route avec React Router.
+- Une page par route, avec une page 404 pour les routes inexistantes ou si une valeur dans l'URL est absente des données.
+- Logique du routeur centralisée dans un seul fichier.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Scripts Disponibles
 
-## Learn More
+Pour démarrer le projet, vous pouvez utiliser :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lance l'application en mode développement. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le rendu. La page se rechargera automatiquement lors de modifications, et vous verrez également les éventuelles erreurs de linter dans la console.
 
-### Code Splitting
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Lance les tests en mode interactif "watch".
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Construit l'application pour la production dans le dossier `build`. React est correctement packagé en mode production et optimisé pour de meilleures performances. Les fichiers sont minimisés, et les noms de fichiers contiennent des hash uniques.
 
-### Making a Progressive Web App
+```bash
+npm run eject
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> **Note** : Cette opération est irréversible. Elle copie toutes les dépendances de configuration (Webpack, Babel, ESLint, etc.) directement dans votre projet, vous permettant d'avoir un contrôle total. Utilisez-la uniquement si vous avez besoin de personnaliser la configuration avancée du projet.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Informations supplémentaires
 
-### Deployment
+Pour plus d’informations sur le déploiement, les tests ou la configuration, consultez la documentation officielle de Create React App.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
