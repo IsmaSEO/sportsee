@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif, "arial";
+  max-width: 1440px;
+}
+
+main {
+  margin-left: 2rem;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1 {
+  color: #000;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.user-name {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+.header-profile {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+/* a checker */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+.charts {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.metrics {
+  border-radius: 5px;
+}
