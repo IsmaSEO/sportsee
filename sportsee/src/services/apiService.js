@@ -1,6 +1,7 @@
+// src/services/apiService.js
 import axios from "axios";
-
-const BASE_URL = "http://localhost:3000"; // URL de l'API locale
+import { BASE_URL, USE_MOCKS } from "../config";
+import { getUserData } from "./mockApi";
 
 /**
  * Récupère les données principales de l'utilisateur.
@@ -9,14 +10,16 @@ const BASE_URL = "http://localhost:3000"; // URL de l'API locale
  */
 
 export const fetchUserById = async (id) => {
+  if (USE_MOCKS) {
+    return getUserData(id);
+  }
   try {
     const response = await axios.get(`${BASE_URL}/user/${id}`);
     return response.data.data;
   } catch (error) {
-    console.error(
-      "Erreur lors de la récupération des données principales :",
-      error
-    );
+    if (error.response && error.response.status === 404) {
+      throw new Error("Utilisateur non trouvé");
+    }
     throw error;
   }
 };
@@ -28,6 +31,10 @@ export const fetchUserById = async (id) => {
  */
 
 export const fetchUserActivity = async (id) => {
+  if (USE_MOCKS) {
+    const user = await getUserData(id);
+    return user.sessions;
+  }
   try {
     const response = await axios.get(`${BASE_URL}/user/${id}/activity`);
     return response.data.data.sessions;
@@ -47,6 +54,13 @@ export const fetchUserActivity = async (id) => {
  */
 
 export const fetchUserAverageSessions = async (id) => {
+  if (USE_MOCKS) {
+    const user = await getUserData(id);
+    return user.sessions.map((session) => ({
+      day: session.day,
+      sessionLength: session.sessionLength,
+    }));
+  }
   try {
     const response = await axios.get(`${BASE_URL}/user/${id}/average-sessions`);
     return response.data.data.sessions;
@@ -66,6 +80,13 @@ export const fetchUserAverageSessions = async (id) => {
  */
 
 export const fetchUserPerformance = async (id) => {
+  if (USE_MOCKS) {
+    const user = await getUserData(id);
+    return user.performance.map((item) => ({
+      kind: item.kind,
+      value: item.value,
+    }));
+  }
   try {
     const response = await axios.get(`${BASE_URL}/user/${id}/performance`);
     const kindMapping = response.data.data.kind;
