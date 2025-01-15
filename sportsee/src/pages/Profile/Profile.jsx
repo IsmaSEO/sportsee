@@ -6,6 +6,7 @@ import GoalScoreChart from "../../components/Charts/GoalScoreChart/GoalScoreChar
 import KeyMetrics from "../../components/Charts/KeyMetrics/KeyMetrics";
 import PerformanceChart from "../../components/Charts/PerformanceChart/PerformanceChart";
 import { fetchUserActivity, fetchUserAverageSessions, fetchUserById, fetchUserPerformance } from "../../services/apiService";
+import NotFound from "../NotFound/NotFound";
 import "./Profile.css";
 
 function Profile() {
@@ -40,9 +41,9 @@ function Profile() {
 
     fetchData();
   }, [id]);
-
+ 
   if (loading) return <p>Chargement des données...</p>;
-  if (error) return <p>{error}</p>;
+  if (error) {return <NotFound />;}
 
   return (
     <div className="profile">
